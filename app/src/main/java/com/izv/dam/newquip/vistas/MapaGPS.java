@@ -81,7 +81,7 @@ public class MapaGPS extends FragmentActivity
                 Toast.makeText(this, "No hay ubicaciones guardadas", Toast.LENGTH_SHORT).show();
             }else{
                 LatLng punto = new LatLng(map.getLatitud(), map.getLongitud());
-                mMap.addMarker(new MarkerOptions().position(punto).title("Nota "+map.getId()));
+                mMap.addMarker(new MarkerOptions().position(punto).title("Titulo: "+map.getTitulo()));
                 mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(punto, 12));
             }
         }
@@ -125,9 +125,8 @@ public class MapaGPS extends FragmentActivity
             if(map.toString().isEmpty()){
                 Toast.makeText(this, "No hay ubicaciones guardadas", Toast.LENGTH_SHORT).show();
             }else{
-                //LatLng punto = new LatLng(location.getLatitude(), location.getLongitude());
                 LatLng punto = new LatLng(map.getLatitud(), map.getLongitud());
-                mMap.addMarker(new MarkerOptions().position(punto).title("Nota "+map.getId()));
+                mMap.addMarker(new MarkerOptions().position(punto).title("Titulo: "+map.getTitulo()));
                 mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(punto, 12));
             }
         }

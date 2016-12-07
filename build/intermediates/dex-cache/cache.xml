@@ -295,7 +295,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="173587eb4918e42f83188a377aabc223722f4227">
+        sha1="969b6c14303e030107753985977445a0f0c9caa3">
         <dex dex="/Users/dam/AndroidStudioProjects/Mapas-notas/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_28a8b2122e77acb3ae367a1c05378dcb4627008e/classes.dex" />
     </item>
     <item
@@ -421,7 +421,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="75fd0ca3e2f47e9be91525fcdef9db5b48900975">
+        sha1="7d32e341d71d8c0c49cb9c162688067ee6a6cd75">
         <dex dex="/Users/dam/AndroidStudioProjects/Mapas-notas/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_23821276dac815295f5455ea5df1bb3d586d822e/classes.dex" />
     </item>
     <item

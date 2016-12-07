@@ -16,6 +16,9 @@ public class Mapa implements Parcelable {
     @DatabaseField(columnName = "id", generatedId = true)
     private long id;
 
+    @DatabaseField(columnName = "titulo")
+    private String titulo;
+
     @DatabaseField(columnName = "latitud")
     private double latitud;
 
@@ -24,10 +27,19 @@ public class Mapa implements Parcelable {
 
     public Mapa(){}
 
-    public Mapa(long id, Double latitud, Double longitud) {
+    public Mapa(long id, String titulo, Double latitud, Double longitud) {
         this.id = id;
+        this.titulo = titulo;
         this.latitud = latitud;
         this.longitud = longitud;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
 
     public long getId() {

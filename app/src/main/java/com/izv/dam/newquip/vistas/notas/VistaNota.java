@@ -36,6 +36,7 @@ public class VistaNota extends AppCompatActivity implements ContratoNota.Interfa
     private Double longitud, latitud;
     AyudanteMapa am = new AyudanteMapa(this);
     RuntimeExceptionDao<Mapa, Integer> simpleDao = am.getDataDao();
+    private String titulo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -109,7 +110,7 @@ public class VistaNota extends AppCompatActivity implements ContratoNota.Interfa
         }
 
         id = nota.getId();
-
+        titulo = nota.getTitulo();
         guardarMapa();
 
     }
@@ -167,7 +168,7 @@ public class VistaNota extends AppCompatActivity implements ContratoNota.Interfa
     public void guardarMapa() {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             Location mLastLocation = LocationServices.FusedLocationApi.getLastLocation(apiClient);
-            mapa = new Mapa(id,mLastLocation.getLatitude(), mLastLocation.getLongitude());
+            mapa = new Mapa(id, titulo ,mLastLocation.getLatitude(), mLastLocation.getLongitude());
             System.out.println(mapa);
             simpleDao.create(mapa);
         }
